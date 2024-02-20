@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+	<link rel="stylesheet" href="style.css">
+	<title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+</head>
+
+<body>
+
+
+
+
+	<article class="card">
+		<div class="card__content">
+			<div class="card__text">
+				<h1 class="card__title">Stay updated!</h1>
+				<p class="card__paragraph">Join 60,000+ product managers receiving monthly updates on:</p>
+				<div class="card__list">
+					<ul class="list">
+					<li class="list__text">Product discovery and building what matters</li>
+						<li class="list__text">Measuring to ensure updates are a success</li>
+											<li class="list__text">And much more!</li>
+					</ul>
+				</div>
+				<div class="card__mail">
+					<div class="text-container">
+						<span class="text-container__text">Email address</span>
+						<span class="text-container__text text-container__text--hidden">Valid email required</span>
+					</div>
+					<form class="form" action="#"  novalidate onsubmit=" validateEmail(event)">
+						<input class="form__input"  type="email" name='email' id="email"  placeholder="email@company.com">
+						<button class="btn" type="submit">Subscribe to monthly newsletter</button>
+					</form>
+				</div>
+			</div>
+
+			<div class="card__container-img">
+				<picture>
+					<source  media="(max-width: 576px)" srcset="./assets/images/illustration-sign-up-mobile.svg">
+
+					<source  media="(min-width: 577px)"
+						srcset="./assets/images/illustration-sign-up-desktop.svg">
+
+					<img class="img" src="./assets/images/illustration-sign-up-desktop.svg" alt="illustration sign up">
+				</picture>
+			</div>
+		</div>
+	</article>
+
+
+
+	<div class="confirmation-message confirmation-message--hidden">
+		<div class="positioning">
+		<div class="confirmation-message__icon">
+			<img class="success-icon" src="assets/images/icon-success.svg" alt="">
+		</div>
+
+		<p class="confirmation-text confirmation-text-large">Thanks for subscribing!</p>
+		<p class="confirmation-text">A confirmation email has been sent to <span class="text-bold">ash@loremcompany.com.</span> ash@loremcompany.com. Please open it and click the button inside to confirm your subscription.</p>
+		</div>
+		<button class="btn" onclick="dissmisMesage()">Dismiss message</button>
+	</div>
+
+
+
+
+
+			<script src="js.js"></script>
+</body>
+
+</html>
+
